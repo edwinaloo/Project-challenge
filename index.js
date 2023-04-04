@@ -1,3 +1,30 @@
+fetch('http://localhost:3000/films')
+.then(response => response.json())
+.then(data => {
+  const container = document.getElementById('container');
+  console.log(data);
+  const items = data;
+  let html = '';
+  data.forEach(item => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    const img = document.createElement('First Name');
+    img.src = item.poster;
+    img.alt = item.title;
+    card.appendChild(img);
+    const cardContent = document.createElement('div');
+    cardContent.classList.add('card-content');
+    const title = document.createElement('h2');
+    title.textContent = item.title;
+    cardContent.appendChild(title);
+    const description = document.createElement('p');
+    description.textContent = item.description;
+    cardContent.appendChild(description);
+    card.appendChild(cardContent);
+    container.appendChild(card);
+  });
+})
+.catch(error => console.error(error));
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -79,3 +106,7 @@ topnavLinks.forEach(function(link) {
     window.scrollTo(0, targetSection.offsetTop);
   });
 });
+
+
+
+
