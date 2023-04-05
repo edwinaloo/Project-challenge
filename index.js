@@ -12,14 +12,13 @@ fetch('db.json')
     //const container = document.getElementsByClassName('card-content');
     document.getElementById("card-content").innerHTML +=`<div class="card">        
     <div class="card">        
-        <h2>${item.Name}</h2>        
-       <p class="title">CEO & Founder</p>        
+        <h2>${item.Name}</h2>
+        <p class="title">Business partners</p>        
         <p>Opportunities don't happen, you create them.</p>        
         <p>hawishan@gmail.com</p> 
        <img src="images/pic2.jpeg" alt="Hawi" style="width:70%">          
         </div>        
-    </div> `;
- 
+    </div> `; 
 
   });
 })
