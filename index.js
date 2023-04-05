@@ -19,16 +19,7 @@ fetch('db.json')
        <img src="images/pic2.jpeg" alt="Hawi" style="width:70%">          
         </div>        
     </div> `;
-    document.getElementById("card-content").innerHTML +=`<div class="card">        
-    <div class="card">        
-        <h2>${item.Name}</h2>        
-       <p class="title">Managing Director</p>        
-        <p>Great things shall happen to those who seek out for them.</p>        
-        <p>okwiripaul@gmail.com</p> 
-       <img src="images/Paul.jpeg" alt="Hawi" style="width:70%">          
-        </div>        
-    </div> `;
-    
+ 
 
   });
 })
