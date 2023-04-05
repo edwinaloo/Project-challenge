@@ -1,27 +1,35 @@
-fetch('http://localhost:3000/films')
+console.log("say")
+fetch('db.json')
 .then(response => response.json())
 .then(data => {
-  const container = document.getElementById('container');
-  console.log(data);
-  const items = data;
+
+  //console.log (container)
+  const items =data.data;
+  console.log(items);
   let html = '';
-  data.forEach(item => {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    const img = document.createElement('First Name');
-    img.src = item.poster;
-    img.alt = item.title;
-    card.appendChild(img);
-    const cardContent = document.createElement('div');
-    cardContent.classList.add('card-content');
-    const title = document.createElement('h2');
-    title.textContent = item.title;
-    cardContent.appendChild(title);
-    const description = document.createElement('p');
-    description.textContent = item.description;
-    cardContent.appendChild(description);
-    card.appendChild(cardContent);
-    container.appendChild(card);
+  items.forEach(item => {
+    console.log (item)
+    //const container = document.getElementsByClassName('card-content');
+    document.getElementById("card-content").innerHTML +=`<div class="card">        
+    <div class="card">        
+        <h2>${item.Name}</h2>        
+       <p class="title">CEO & Founder</p>        
+        <p>Opportunities don't happen, you create them.</p>        
+        <p>hawishan@gmail.com</p> 
+       <img src="images/pic2.jpeg" alt="Hawi" style="width:70%">          
+        </div>        
+    </div> `;
+    document.getElementById("card-content").innerHTML +=`<div class="card">        
+    <div class="card">        
+        <h2>${item.Name}</h2>        
+       <p class="title">Managing Director</p>        
+        <p>Great things shall happen to those who seek out for them.</p>        
+        <p>okwiripaul@gmail.com</p> 
+       <img src="images/Paul.jpeg" alt="Hawi" style="width:70%">          
+        </div>        
+    </div> `;
+    
+
   });
 })
 .catch(error => console.error(error));
@@ -33,80 +41,6 @@ var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-// Add smooth scrolling to all links
-$(document).ready(function(){
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    } 
-  });
-});
-
-// Add sticky navbar
-window.onscroll = function() {stickyNavbar()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function stickyNavbar() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-var navBtn = document.getElementById("navBtn");
-var navbarLinks = document.querySelectorAll("#navbar a");
-var topnavLinks = document.querySelectorAll(".topnav a");
-
-navBtn.addEventListener("click", function() {
-  // Scroll to the section with the ID "section1"
-  var section1 = document.getElementById("section1");
-  window.scrollTo(0, section1.offsetTop);
-});
-
-navbarLinks.forEach(function(link) {
-  link.addEventListener("click", function(event) {
-    event.preventDefault();
-    var targetId = this.getAttribute("href");
-    var targetSection = document.querySelector(targetId);
-    window.scrollTo(0, targetSection.offsetTop);
-  });
-});
-
-topnavLinks.forEach(function(link) {
-  link.addEventListener("click", function(event) {
-    event.preventDefault();
-    var targetId = this.getAttribute("href");
-    var targetSection = document.querySelector(targetId);
-    window.scrollTo(0, targetSection.offsetTop);
-  });
-});
-
 
 
 

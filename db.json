@@ -1,41 +1,36 @@
 {
-    "films": [
+    "data": [
       {
         "id": "1",
-        "First Name": "Shannice",
-        "Last Name": "Hawi",
+        "Name": "Shannice Hawi",
         "Phone Number": "0768411851",
         "Age": 25,
         "Email": "hawishan@gmail.com"     
       },
       {
         "id": "2",
-        "First Name": "Paul",
-        "Last Name": "Okwiri",
+        "Name": "Paul Okwiri",
         "Phone Number": "0722745287",
         "Age": 45,
         "Email": "okwiripaul@gmail.com"    
       },
       {
         "id": "3",
-        "First Name": "Pascal",
-        "Last Name": "Omollo",
+        "Name": "Pascal Omollo",
         "Phone Number": "0702034109",
         "Age": 29,
         "Email": "aloopascal@gmail.com"   
       },
       {
         "id": "4",
-        "First Name": "Charles",
-        "Last Name": "Otieno",
+        "Name": "Charles Otieno>",
         "Phone Number": "071815850",
         "Age": 30,
         "Email": "charlestieno@gmail.com"   
       },
       {
         "id": "5",
-        "First Name": "Stacy",
-        "Last Name": "Ruiru",
+        "Name": "Stacy Ruiru",
         "Phone Number": "0768511851",
         "Age": 24,
         "Email": "stacyruiru@gmail.com"   
