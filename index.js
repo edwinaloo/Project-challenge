@@ -15,8 +15,7 @@ fetch('db.json')
         <h2>${item.Name}</h2>
         <p class="title">Business partners</p>        
         <p>Opportunities don't happen, you create them.</p>        
-        <p>hawishan@gmail.com</p> 
-       <img src="images/pic2.jpeg" alt="Hawi" style="width:70%">          
+        <p>hawishan@gmail.com</p>       
         </div>        
     </div> `; 
 
