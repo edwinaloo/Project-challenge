@@ -42,8 +42,36 @@
   join our team and we will fulfil our promise <d>
     to you as our client. Welcome to the team. 
   </d>
-</d></p>
+</d>
+Do not miss out on the best offered by our staff. Join us</p>
+<p><strong>Join us!!</strong> </p>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">SignUp</button>
+<div id="id02" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTMHQzkzht88td5kmJWKWBZlmxVBzpbTz7Q&usqp=CAU" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+      <label for="fname"><b>First Name</b></label>
+      <input type="text" placeholder="Enter First Name" name="fname" required>
 
+      <label for="lname"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Sign Up</button>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
 <h1>Login Form</h1>
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 <div id="id01" class="modal">  
@@ -101,5 +129,4 @@
 </div>
 <script src="index.js"></script>
 </body>
-
 </html>
