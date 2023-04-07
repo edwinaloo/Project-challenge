@@ -1,35 +1,22 @@
-console.log("say")
 fetch('db.json')
-.then(response => response.json())
-.then(data => {
+  .then(response => response.json())
+  .then(data => {
 
-  //console.log (container)
-  const items =data.data;
-  console.log(items);
-  let html = '';
-  items.forEach(item => {
-    console.log (item)
-    //const container = document.getElementsByClassName('card-content');
-    document.getElementById("card-content").innerHTML +=`<div class="card">        
-    <div class="card">        
-        <h2>${item.Name}</h2>
-        <p class="title">Business partners</p>        
-        <p>Opportunities don't happen, you create them.</p>        
-        <p>hawishan@gmail.com</p>       
-        </div>        
-    </div> `; 
-
-  });
-})
-.catch(error => console.error(error));
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-
-
+    const items = data.data;
+    console.log(items);
+    let html = '';
+    items.forEach(item => {
+      console.log(item)
+      document.getElementById("card-content").innerHTML += `
+          <div class="card-content">
+            <h2>${item.Name}</h2>
+            <div class="card">        
+            <img src="${item.image}" alt="${item.Name}" style="width: 1000px;">
+            <p class="title">Business partners</p>               
+            <p>${item.Email}</p>       
+          </div>        
+        </div> 
+      `;
+    });
+  })
+  .catch(error => console.error(error));
