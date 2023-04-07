@@ -1,2 +1,2 @@
 # Project-challenge
-https://github.com/edwinaloo/Project-challenge
+https://edwinaloo.github.io/Project-challenge/
